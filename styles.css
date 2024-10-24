@@ -1,0 +1,156 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  background-color: rgb(250 247 242);
+  background-image: url('https://img.freepik.com/free-vector/cat-lover-pattern-background-design_53876-100662.jpg?t=st=1729658478~exp=1729662078~hmac=ab4944141ebb552b73c887debb1690bee5c41ff5dddd9a0dcc97173c0a3bab5e&w=996');
+  background-size: 40% 40%;
+  background-attachment: fixed;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+body p {
+  font-size: 25px;
+}
+
+/* Center the form on the page */
+.form-container {
+  max-width: 600px; /* Limit width for better mobile responsiveness */
+  width: 100%; /* Take full width on smaller screens */
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  background-color: #fff; /* More neutral background */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease; /* Smooth hover transition */
+}
+h1 {
+  padding: 20px;
+  font-size: xx-large;
+  text-align: center;
+}
+/* Add subtle hover effect to the form container */
+.form-container:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Style for each input field group */
+.input-group {
+  margin-bottom: 20px; /* Increased space for better separation */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+:last-child(.input-group) {
+  justify-content: center;
+}
+
+/* Add focus effect for input fields */
+input[type="text"],
+textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 70%; /* Ensure fields span the width */
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+  border-color: #4caf50; /* Highlight border on focus */
+  outline: none; /* Remove default outline */
+}
+
+/* Style the submit button */
+input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect for submit button */
+input[type="submit"]:hover {
+  background-color: #45a049;
+  transform: translateY(-2px); /* Subtle hover lift */
+}
+
+/* Add focus effect to button */
+input[type="submit"]:focus {
+  outline: 2px solid #45a049;
+}
+
+/* Style the list of species */
+.species-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 20px;
+}
+
+.species-list p {
+  max-width: 0px;
+}
+
+.species-list li {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  background-color: #f0f0f0; /* Light background to highlight the items */
+  padding: 10px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  color: midnightblue;
+  font-size: 21px;
+  text-transform: uppercase;
+  justify-content: space-around;
+}
+
+/* Hover effect for list items */
+.species-list li:hover {
+  background-color: #e0e0e0;
+}
+
+/* Style the cat images */
+.cat-image {
+  margin-left: 15px;
+  width: 150px;
+  height: 150px;
+  border-radius: 8px;
+  object-fit: inherit; /* Ensure the image is contained and maintains aspect ratio */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect for images */
+.cat-image:hover {
+  transform: scale(1.05); /* Slight zoom-in effect on hover */
+}
+
+/* Add responsiveness for smaller screens */
+@media (max-width: 768px) {
+  .form-container {
+    padding: 15px;
+  }
+
+  .species-list li {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cat-image {
+    margin-left: 0;
+    margin-top: 10px;
+    width: 80px;
+    height: 80px;
+  }
+}
